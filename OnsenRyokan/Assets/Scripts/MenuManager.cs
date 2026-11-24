@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public sealed class MenuManager : MonoBehaviour
@@ -31,6 +32,11 @@ public sealed class MenuManager : MonoBehaviour
     {
         if (menuFont != null)
             Destroy(menuFont);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene("Assets/Scenes/AVG");
     }
 
     public void OpenSaveFolder()
